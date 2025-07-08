@@ -57,6 +57,8 @@
 
     <hr>
 
+    <h2>Handmade</h2>
+
     <div class="container"> <!--image grid -->
         <div class="row row-cols-4 g-3">
             <div class="col"><a href="#"><img src="../Images/Kawaii1.png" class="img-fluid" alt="Image 1"></a></div>
@@ -76,20 +78,6 @@
         </div>
     </div>
 
-    <!-- New Row: Links for pages-->
-    <div class="row mb-0 row-page-links">
-        <div class="col d-flex justify-content-center gap-3 mb-3">
-            <a href="#" class="btn"><-</a>
-            <a href="#" class="btn">1</a>
-            <a href="#" class="btn">2</a>
-            <a href="#" class="btn">3</a>
-            <a href="#" class="btn">4</a>
-            <a href="#" class="btn">5</a>
-            <a href="#" class="btn">-></a>
-        </div>
-    </div>
-
-    <h2>Parts</h2>
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
         &nbsp;
@@ -121,7 +109,18 @@
         </tr>
         </tbody>
     </table>
-    <h2>Products</h2>
+    <h2>Necklace Products</h2>
+
+    <!-- New Row: Links for Necklaces-->
+    <div class="container">
+        <div class="row row-cols-4 g-3">
+            <a href="#" class="btn"><img src="../Images/Kawaiibag1.png"></a>
+            <a href="#" class="btn"><img src="../Images/Kawaiibag2.png"></a>
+            <a href="#" class="btn"><img src="../Images/Kawaiibag3.png"></a>
+            <a href="#" class="btn"><img src="../Images/Kawaiibag4.png"></a>
+        </div>
+    </div>
+
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="productkeyword" id="productkeyword" size="50" th:value="${productkeyword}" required />
         &nbsp;

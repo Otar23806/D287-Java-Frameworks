@@ -43,32 +43,6 @@ hr {
     margin: 0;
 }
 
-.row-page-links {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.row-page-links .btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: lightblue;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0;
-    border: none;
-}
-
-.row-page-links.btn:hover {
-background-color: #90CAF9;
-}
-
 
 
 
