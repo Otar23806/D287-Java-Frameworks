@@ -43,6 +43,18 @@ hr {
     margin: 0;
 }
 
+.about-page-body {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
 
+h3 {
+    text-align: center;
+}
+
+.about-page-link {
+    text-decoration: underline;
+}
 
 
