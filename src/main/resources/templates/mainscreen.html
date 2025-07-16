@@ -60,21 +60,25 @@
     <h2>Handmade</h2>
 
     <div class="container"> <!--image grid -->
-        <div class="row row-cols-4 g-3">
-            <div class="col"><a href="#"><img src="../Images/Kawaii1.png" class="img-fluid" alt="Image 1"></a></div>
-            <div class="col"><a href="#"><img src="../Images/Kawaii2.png" class="img-fluid" alt="Image 2"></a></div>
-            <div class="col"><a href="#"><img src="../Images/Kawaii3.png" class="img-fluid" alt="Image 3"></a></div>
-            <div class="col"><a href="#"><img src="../Images/Kawaii4.png" class="img-fluid" alt="Image 4"></a></div>
+        <div class="row row-cols-5 g-3">
+            <div class="col"><a href="#"><img th:src="@{/images/Kawaii1.png}" class="img-fluid" alt="Image 1"></a></div>
+            <div class="col"><a href="#"><img th:src="@{/images/Kawaii3.png}" class="img-fluid" alt="Image 2"></a></div>
+            <div class="col"><a href="#"><img th:src="@{/images/Kawaii7.png}" class="img-fluid" alt="Image 3"></a></div>
+            <div class="col"><a href="#"><img th:src="@{/images/Kawaii8.png}" class="img-fluid" alt="Image 4"></a></div>
+            <div class="col"><a href="#"><img th:src="@{/images/Kawaii11.png}" class="img-fluid" alt="Image 5"></a></div>
+        </div>
+    </div>
 
-            <div class="col"><a href="#"><img src="../Images/Kawaii5.png" class="img-fluid" alt="Image 5"></a></div>
-            <div class="col"><a href="#"><img src="../Images/Kawaii6.png" class="img-fluid" alt="Image 6"></a></div>
-            <div class="col"><a href="#"><img src="../Images/Kawaii7.png" class="img-fluid" alt="Image 7"></a></div>
-            <div class="col"><a href="#"><img src="../Images/Kawaii8.png" class="img-fluid" alt="Image 8"></a></div>
+    <h2>Crochet Bags</h2>
 
-            <div class="col"><a href="#"><img src="../Images/Kawaii9.png" class="img-fluid" alt="Image 9"></a></div>
-            <div class="col"><a href="#"><img src="../Images/Kawaii10.png" class="img-fluid" alt="Image 10"></a></div>
-            <div class="col"><a href="#"><img src="../Images/Kawaii11.png" class="img-fluid" alt="Image 11"></a></div>
-            <div class="col"><a href="#"><img src="../Images/Kawaii12.png" class="img-fluid" alt="Image 12"></a></div>
+    <!-- New Row: Links for Bags-->
+    <div class="container">
+        <div class="row row-cols-5 g-3">
+            <div class="col"><a href="#"><img th:src="@{/images/Kawaiibag1.png}" class="img-fluid" alt="Image 1"></a></div>
+            <div class="col"><a href="#"><img th:src="@{/images/Kawaiibag2.png}" class="img-fluid" alt="Image 2"></a></div>
+            <div class="col"><a href="#"><img th:src="@{/images/Kawaiibag3.png}" class="img-fluid" alt="Image 3"></a></div>
+            <div class="col"><a href="#"><img th:src="@{/images/Kawaiibag4.png}" class="img-fluid" alt="Image 4"></a></div>
+            <div class="col"><a href="#"><img th:src="@{/images/Kawaiibag5.png}" class="img-fluid" alt="Image 5"></a></div>
         </div>
     </div>
 
@@ -109,17 +113,6 @@
         </tr>
         </tbody>
     </table>
-    <h2>Necklace Products</h2>
-
-    <!-- New Row: Links for Necklaces-->
-    <div class="container">
-        <div class="row row-cols-4 g-3">
-            <a href="#" class="btn"><img src="../Images/Kawaiibag1.png"></a>
-            <a href="#" class="btn"><img src="../Images/Kawaiibag2.png"></a>
-            <a href="#" class="btn"><img src="../Images/Kawaiibag3.png"></a>
-            <a href="#" class="btn"><img src="../Images/Kawaiibag4.png"></a>
-        </div>
-    </div>
 
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="productkeyword" id="productkeyword" size="50" th:value="${productkeyword}" required />
@@ -150,6 +143,7 @@
             <td th:text="${tempProduct.price}">1</td>
             <td th:text="${tempProduct.inv}">1</td>
             <td><a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
+                <a th:href="@{/buyProduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Buy Now</a>
                 <a th:href="@{/deleteproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3"
                    onclick="if(!(confirm('Are you sure you want to delete this product?')))return false">Delete</a>
             </td>
