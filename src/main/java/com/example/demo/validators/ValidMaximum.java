@@ -19,7 +19,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidMaximum {
-    String message() default "Part count is above set maximum";
+    String message() default "Part count is above the set maximum";
     Class<?> [] groups() default {};
     Class<? extends Payload> [] payload() default {};
 }

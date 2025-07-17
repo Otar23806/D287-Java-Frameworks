@@ -17,7 +17,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidMinimum {
-    String message() default "Part count falls below set minimum";
+    String message() default "Part count is below the set minimum";
     Class<?> [] groups() default {};
     Class<? extends Payload> [] payload() default {};
 }
