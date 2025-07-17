@@ -30,6 +30,7 @@ public class AddOutsourcedPartController {
     @Autowired
     private ApplicationContext context;
 
+    @SuppressWarnings("SameReturnValue")
     @GetMapping("/showFormAddOutPart")
     public String showFormAddOutsourcedPart(Model theModel){
         Part part=new OutsourcedPart();

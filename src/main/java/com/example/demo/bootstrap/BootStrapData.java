@@ -3,6 +3,7 @@ import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
+import com.example.demo.repositories.InhousePartRepository;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import com.example.demo.repositories.PartRepository;
 import com.example.demo.repositories.ProductRepository;
@@ -27,12 +28,13 @@ public class BootStrapData implements CommandLineRunner {
 
     private final PartRepository partRepository;
     private final ProductRepository productRepository;
-
+    private final InhousePartRepository inhousePartRepository;
     private final OutsourcedPartRepository outsourcedPartRepository;
 
-    public BootStrapData(PartRepository partRepository, ProductRepository productRepository, OutsourcedPartRepository outsourcedPartRepository) {
+    public BootStrapData(PartRepository partRepository, ProductRepository productRepository, InhousePartRepository inhousePartRepository, OutsourcedPartRepository outsourcedPartRepository) {
         this.partRepository = partRepository;
         this.productRepository = productRepository;
+        this.inhousePartRepository = inhousePartRepository;
         this.outsourcedPartRepository=outsourcedPartRepository;
     }
 
@@ -93,18 +95,24 @@ public class BootStrapData implements CommandLineRunner {
         bag1.setName("Bag1");
         bag1.setPrice(249.99);
         bag1.setInv(25);
+        bag1.setMinInv(1);
+        bag1.setMaxInv(100);
 
         InhousePart bag2 = new InhousePart();
         bag2.setId(2);
         bag2.setName("Bag2");
         bag2.setPrice(249.99);
         bag2.setInv(25);
+        bag2.setMinInv(1);
+        bag2.setMaxInv(100);
 
         InhousePart bag3 = new InhousePart();
         bag3.setId(3);
         bag3.setName("Bag3");
         bag3.setPrice(249.99);
         bag3.setInv(25);
+        bag3.setMinInv(1);
+        bag3.setMaxInv(100);
 
 
         InhousePart bag4 = new InhousePart();
@@ -112,14 +120,16 @@ public class BootStrapData implements CommandLineRunner {
         bag4.setName("Bag4");
         bag4.setPrice(249.99);
         bag4.setInv(25);
-
+        bag4.setMinInv(1);
+        bag4.setMaxInv(100);
 
         InhousePart bag5 = new InhousePart();
         bag5.setId(5);
         bag5.setName("Bag5");
         bag5.setPrice(249.99);
         bag5.setInv(25);
-
+        bag5.setMinInv(1);
+        bag5.setMaxInv(100);
 
         sampleParts.add(bag1);
         sampleParts.add(bag2);

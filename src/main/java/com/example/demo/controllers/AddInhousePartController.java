@@ -29,6 +29,7 @@ public class AddInhousePartController{
     @Autowired
     private ApplicationContext context;
 
+    @SuppressWarnings("SameReturnValue")
     @GetMapping("/showFormAddInPart")
     public String showFormAddInhousePart(Model theModel){
         InhousePart inhousepart=new InhousePart();
