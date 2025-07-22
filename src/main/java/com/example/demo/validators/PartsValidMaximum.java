@@ -13,11 +13,11 @@ import java.lang.annotation.Target;
  *
  *
  */
-@Constraint(validatedBy = {MinimumValidator.class})
+@Constraint(validatedBy = {MaximumValidatorParts.class})
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ValidMinimum {
-    String message() default "Part count is below the set minimum";
+public @interface PartsValidMaximum {
+    String message() default "Part count is above the set maximum";
     Class<?> [] groups() default {};
     Class<? extends Payload> [] payload() default {};
 }

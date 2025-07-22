@@ -13,13 +13,13 @@ import javax.validation.ConstraintValidatorContext;
  *
  *
  */
-public class MaximumValidator implements ConstraintValidator<ValidMaximum, Part> {
+public class MaximumValidatorParts implements ConstraintValidator<PartsValidMaximum, Part> {
     @Autowired
     private ApplicationContext context;
     public static ApplicationContext myContext;
 
     @Override
-    public void initialize(ValidMaximum constraintAnnotation) {
+    public void initialize(PartsValidMaximum constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);
     }
 

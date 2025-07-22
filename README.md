@@ -821,7 +821,7 @@ MODIFING domain model class files to apply minimum validator
 _filename: Part.java_   line 4
 
 ```
-import.com.example.demo.validators.ValidMinimum;
+import.com.example.demo.validators.PartsValidMinimum;
 ...
 line 21: @ValidMinimum
 ```
@@ -890,7 +890,7 @@ _filename: ValidMaximum.java_ lines 1-25
 ```
 package com.example.demo.validators;
 
-import com.example.demo.validators.MaximumValidator;
+import com.example.demo.validators.MaximumValidatorParts;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -957,7 +957,7 @@ MODIFING domain model class files to apply maximum validator
 _filename: Part.java_  line 3
 
 ```
-import.com.example.demo.validators.ValidMaximum;
+import.com.example.demo.validators.PartsValidMaximum;
 ...
 line 21: @ValidMaximum
 ```

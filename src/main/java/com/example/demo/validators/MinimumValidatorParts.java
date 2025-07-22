@@ -13,13 +13,13 @@ import javax.validation.ConstraintValidatorContext;
  *
  *
  */
-public class MinimumValidator implements ConstraintValidator<ValidMinimum, Part> {
+public class MinimumValidatorParts implements ConstraintValidator<PartsValidMinimum, Part> {
     @Autowired
     private ApplicationContext context;
     public static ApplicationContext myContext;
 
     @Override
-    public void initialize(ValidMinimum constraintAnnotation) {
+    public void initialize(PartsValidMinimum constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);
     }
 

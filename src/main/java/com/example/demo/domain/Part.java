@@ -1,7 +1,7 @@
 package com.example.demo.domain;
 
-import com.example.demo.validators.ValidMaximum;
-import com.example.demo.validators.ValidMinimum;
+import com.example.demo.validators.PartsValidMaximum;
+import com.example.demo.validators.PartsValidMinimum;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
@@ -17,8 +17,8 @@ import java.util.Set;
  *
  */
 @Entity
-@ValidMinimum
-@ValidMaximum
+@PartsValidMinimum
+@PartsValidMaximum
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="part_type",discriminatorType = DiscriminatorType.INTEGER)
 @Table(name="Parts")
