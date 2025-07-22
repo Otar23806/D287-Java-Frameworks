@@ -69,7 +69,7 @@ public class BootStrapData implements CommandLineRunner {
         InhousePart bag1 = new InhousePart();
         bag1.setId(1);
         bag1.setName("Yellow Shell Bag");
-        bag1.setPrice(249.99);
+        bag1.setPrice(14.99);
         bag1.setInv(25);
         bag1.setMinInv(1);
         bag1.setMaxInv(100);
@@ -77,7 +77,7 @@ public class BootStrapData implements CommandLineRunner {
         InhousePart bag2 = new InhousePart();
         bag2.setId(2);
         bag2.setName("Crochet Ferrari Bag");
-        bag2.setPrice(249.99);
+        bag2.setPrice(14.99);
         bag2.setInv(25);
         bag2.setMinInv(1);
         bag2.setMaxInv(100);
@@ -85,7 +85,7 @@ public class BootStrapData implements CommandLineRunner {
         InhousePart bag3 = new InhousePart();
         bag3.setId(3);
         bag3.setName("Dove Bag");
-        bag3.setPrice(249.99);
+        bag3.setPrice(14.99);
         bag3.setInv(25);
         bag3.setMinInv(1);
         bag3.setMaxInv(100);
@@ -94,7 +94,7 @@ public class BootStrapData implements CommandLineRunner {
         InhousePart bag4 = new InhousePart();
         bag4.setId(4);
         bag4.setName("Crochet Dior Tote Bag");
-        bag4.setPrice(249.99);
+        bag4.setPrice(29.99);
         bag4.setInv(25);
         bag4.setMinInv(1);
         bag4.setMaxInv(100);
@@ -102,7 +102,7 @@ public class BootStrapData implements CommandLineRunner {
         InhousePart bag5 = new InhousePart();
         bag5.setId(5);
         bag5.setName("Cherry Bag");
-        bag5.setPrice(249.99);
+        bag5.setPrice(29.99);
         bag5.setInv(25);
         bag5.setMinInv(1);
         bag5.setMaxInv(100);
