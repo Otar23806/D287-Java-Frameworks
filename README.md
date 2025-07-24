@@ -1,7 +1,7 @@
 ## D287 JAVA FRAMEWORKS: Read Me
 **Scenario**: You are working for a company that licenses and customizes a software application to keep track of inventory in stores. Your job as a software developer is to customize this application to meet a specific customer’s needs.
 
-For my project, I have designed a fictional company based on a small business owned by a friend of mine. She sells homemade sweet snacks like hand-decorated chocolate pretzels, tasty rice crispy treats, or hand-dipped and decorated Oreos. She assembles a variety of sweets into fun boxes that she can sell as combo packs around particular holidays or events (like football season). I'm proud of her hard work to build her business, so I dedicate this project to her.
+For my project, I have designed a fictional company based on a small business owned by a friend of mine. She sells handmaded crocheted items. I'm proud of her hard work to build her business, so I dedicate this project to her.
 ### TASK INSTRUCTIONS PROVIDED FOR REFERENCE
 Each note should include the prompt, file name, line number, and change.
 
