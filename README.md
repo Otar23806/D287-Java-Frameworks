@@ -1,198 +1,154 @@
 ## D287 JAVA FRAMEWORKS: Read Me
-**Scenario**: You are working for a company that licenses and customizes a software application to keep track of inventory in stores. Your job as a software developer is to customize this application to meet a specific customer’s needs.
 
-For my project, I have designed a fictional company based on a small business owned by a friend of mine. She sells handmaded crocheted items. I'm proud of her hard work to build her business, so I dedicate this project to her.
-### TASK INSTRUCTIONS PROVIDED FOR REFERENCE
-Each note should include the prompt, file name, line number, and change.
+**Scenario:** You are working for a company that licenses and customizes a software application to keep track of inventory in stores. … (your intro)
 
-## TRACKED CHANGES
-**C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.**
+---
 
-_filename: mainscreen.html_
+### C. Customize the HTML user interface for your customer’s application.
 
-ADDED content to demo.css for CSS styling of page.
-```
-    
+The user interface should include the shop name, product names, and parts.
+
+**_filename: mainscreen.html_**
+
+ADDED content to `demo.css` for CSS styling of page.
+
+```css
 .header-with-logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
-
 .header-with-logo .logo {
-    height: 60px;
-    width: auto;
-    margin-right: 15px;
+  height: 60px;
+  width: auto;
+  margin-right: 15px;
 }
-
 .dropdown-menu {
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
 .dropdown {
-    margin-top: 40px;
+  margin-top: 40px;
 }
-
 .custom-search {
-    max-width: 1000px;
-    border: 1px solid #0d6efd;
-    padding: 0.375rem 0.75rem;
-    color: #0d6efd;
-    box-shadow: none;
-    margin-top: 40px;
+  max-width: 1000px;
+  border: 1px solid #0d6efd;
+  padding: 0.375rem 0.75rem;
+  color: #0d6efd;
+  box-shadow: none;
+  margin-top: 40px;
 }
-
 .custom-search:focus {
-    border-color: #0d6efd;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25); /* Bootstrap blue shadow */
+  border-color: #0d6efd;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
 }
-
 .row-links {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
 hr {
-    margin: 0;
+  margin: 0;
 }
-
 .about-page-body {
-    margin: 0 auto;
-    max-width: 800px;
-    text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
 }
-
 h3 {
-    text-align: center;
+  text-align: center;
 }
-
 .about-page-link {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+Line 14: changed shop name to Kawaii Baby
 
+html
+Copy
+Edit
+<h1>Kawaii Baby</h1>
+Line 23: added a Logo, drop-down menu, and search bar
 
+html
+Copy
+Edit
+<img src="kawaii-logo.png" alt="Kawaii Logo">
+<select class="dropdown-menu">
+  <option>Actions</option>
+  <option>View</option>
+  <option>Edit</option>
+  <option>Delete</option>
+</select>
+<input type="search" class="custom-search" placeholder="Search…">
+Line 47: Added smaller affiliate links under search bar
 
+html
+Copy
+Edit
+<nav class="row-links">
+  <a href="#">Deals from small shops</a> |
+  <a href="#">Home</a> |
+  <a href="#">Favorites</a> |
+  <a href="#">Fashion Finds</a> |
+  <a href="#">Registry</a> |
+  <a href="#">Gift Cards</a>
+</nav>
+Line 60: Changed header to Handmade with image links
 
-```
+html
+Copy
+Edit
+<h2>Handmade</h2>
+<div class="product-images">
+  <a href="#"><img src="image1.jpg" alt="Image 1"></a>
+  <a href="#"><img src="image2.jpg" alt="Image 2"></a>
+  <a href="#"><img src="image3.jpg" alt="Image 3"></a>
+  <a href="#"><img src="image4.jpg" alt="Image 4"></a>
+  <a href="#"><img src="image5.jpg" alt="Image 5"></a>
+</div>
+Line 72: Changed header to Crochet Bags with image links
 
-line 14: changed shop name to Kawaii Baby
+html
+Copy
+Edit
+<h2>Crochet Bags</h2>
+<div class="product-images">
+  <a href="#"><img src="bag1.jpg" alt="Image 1"></a>
+  <a href="#"><img src="bag2.jpg" alt="Image 2"></a>
+  <a href="#"><img src="bag3.jpg" alt="Image 3"></a>
+  <a href="#"><img src="bag4.jpg" alt="Image 4"></a>
+  <a href="#"><img src="bag5.jpg" alt="Image 5"></a>
+</div>
+D. Add an “About” page
+filename: mainscreen.html
+Line 157: added link to About page
 
-```
+html
+Copy
+Edit
+<a href="/aboutPage">What is Kawaii Baby?</a> |
+<a href="/aboutPage">Kawaii Baby about page</a>
+filename: MainScreenController.java
+Lines 56–57: controller for About page
 
-<title>Kawaii Baby</title>
-```
-
-line 23: added a Logo, drop down menu, and search bar
-
-```
-    <!-- Top Row: Logo, Dropdown, Search -->
-    <div class="row align-items-center mb-0">
-
-        <div class="col-auto"> <!-- Image -->
-            <img src="../Images/Kawaii%20baby%20logo.png" alt="Kawaii Logo" class="logo" height="100" width="100">
-        </div>
-
-        <div class="col-auto"> <!-- Button -->
-            <button class="btn btn-primary dropdown-toggle rounded-pill dropdown" type="button" data-bs-toggle="dropdown">
-                Actions
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">View</a></li>
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-            </ul>
-        </div>
-
-        <div class="col"> <!-- Search bar -->
-            <input type="text" class="form-control rounded-pill custom-search" placeholder="Search...">
-        </div>
-
-    </div>
-
-```
-
-line 47: Added smaller affiliate links under search bar
-```
-    <!-- New Row: Links -->
-    <div class="row mb-0 row-links">
-        <div class="col d-flex justify-content-center gap-3 mb-3">
-            <a href="#" class="btn"><strong>Deals from small shops</strong></a>
-            <a href="#" class="btn"><strong>Home Favorites</strong></a>
-            <a href="#" class="btn"><strong>Fashion Finds</strong></a>
-            <a href="#" class="btn"><strong>Registry</strong></a>
-            <a href="#" class="btn"><strong>Gift Cards</strong></a>
-        </div>
-    </div>
-```
-
-Line 60: Changed header to Handmade with image links to handmade products (links dont work theyre just for show)
-```
-    <div class="container"> <!--image grid -->
-        <div class="row row-cols-5 g-3">
-            <div class="col"><a href="#"><img th:src="@{/images/Kawaii1.png}" class="img-fluid" alt="Image 1"></a></div>
-            <div class="col"><a href="#"><img th:src="@{/images/Kawaii3.png}" class="img-fluid" alt="Image 2"></a></div>
-            <div class="col"><a href="#"><img th:src="@{/images/Kawaii7.png}" class="img-fluid" alt="Image 3"></a></div>
-            <div class="col"><a href="#"><img th:src="@{/images/Kawaii8.png}" class="img-fluid" alt="Image 4"></a></div>
-            <div class="col"><a href="#"><img th:src="@{/images/Kawaii11.png}" class="img-fluid" alt="Image 5"></a></div>
-        </div>
-    </div>
-
-```
-Line 72: Changed header to Crochet Bags with image links to handmade products (links dont work theyre just for show)
-```
-    <div class="container">
-        <div class="row row-cols-5 g-3">
-            <div class="col"><a href="#"><img th:src="@{/images/Kawaiibag1.png}" class="img-fluid" alt="Image 1"></a></div>
-            <div class="col"><a href="#"><img th:src="@{/images/Kawaiibag2.png}" class="img-fluid" alt="Image 2"></a></div>
-            <div class="col"><a href="#"><img th:src="@{/images/Kawaiibag3.png}" class="img-fluid" alt="Image 3"></a></div>
-            <div class="col"><a href="#"><img th:src="@{/images/Kawaiibag4.png}" class="img-fluid" alt="Image 4"></a></div>
-            <div class="col"><a href="#"><img th:src="@{/images/Kawaiibag5.png}" class="img-fluid" alt="Image 5"></a></div>
-        </div>
-    </div>
-```
-
-*******************
-
-**D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers
-and include navigation to and from the “About” page and the main screen.**
-
-_filename: mainscreen.html_
-
-line 157: added link to about page at the bottom of page
-
-```
-    <h3>What is Kawaii Baby</h3>
-
-    <div class="d-flex justify-content-center">
-        <a th:href="@{/aboutPage}" class="btn about-page-link"><strong>Kawaii Baby about page</strong></a>
-    </div>
-```
-
-_filename: MainScreenController.java_
-
-lines 56-57: added controller @GetMapping to enable access to About page.
-```
+java
+Copy
+Edit
 @GetMapping("/aboutPage")
-    public String showAboutPage() {
-        return "aboutPage";  // make sure aboutPage.html is in templates folder
-    }
-```
+public String showAboutPage() {
+  return "aboutPage";
+}
+filename: aboutPage.html (lines 1–84):
 
-_filename: aboutPage.html_
-
-lines 1 - 84: added new aboutPAge.html page.
-
-```
+html
+Copy
+Edit
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="../static/css/demo.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Us – Kawaii Baby</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333;;}
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
     header { text-align: center; margin-bottom: 40px; }
     .section { max-width: 800px; margin: 0 auto 40px; }
     h1, h2 { color: #2a6f97; }
@@ -200,71 +156,18 @@ lines 1 - 84: added new aboutPAge.html page.
   </style>
 </head>
 <body>
-<header>
-  <h1>About Kawaii Baby</h1>
-  <p>Handcrafted with love: plushies & bags made just for you 🧶</p>
-</header>
-
-<section class="section">
-  <h2>Our Story</h2>
-  <p>
-    Welcome to <strong>Kawaii Baby</strong>—a small, family‑run shop
-    founded in 2015, born from a passion for crochet and handmade crafts.
-    Inspired by warm memories of crafting with loved ones, we create each
-    plushie and bag stitch by stitch, pouring creativity, care, and joy
-    into every item.
-  </p>
-</section>
-
-<section class="section">
-  <h2>What We Offer</h2>
-  <p>Discover our handcrafted creations, including:</p>
-  <ul>
-    <li>Amigurumi plushies – cute, cuddly characters in a variety of sizes</li>
-    <li>Hand‑crocheted bags – roomy totes, charming crossbody bags, and pouches</li>
-    <li>Custom designs – personalize colors, sizes, or characters to bring your vision to life</li>
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Our Promise</h2>
-  <ul>
-    <li><strong>Quality Craftsmanship</strong>: Every detail is carefully finished, using high‑quality yarn and fillings.</li>
-    <li><strong>Handmade with Heart</strong>: Our creations are unique—no item is mass‑produced.</li>
-    <li><strong>Customer Delight</strong>: We listen, adjust, and design to ensure each purchase brings a smile.</li>
-    <li><strong>Sustainable Practices</strong>: We use eco‑friendly packaging and materials wherever possible.</li>
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Meet the Maker</h2>
-  <p>
-    Hi! I’m <strong>Mia</strong>, the hands and heart behind
-    Kawaii Baby. I’ve been crocheting since [Year or personal note]
-    and find joy in transforming yarn into lovable companions and stylish
-    accessories. Every stitch carries my passion—and yours.
-  </p>
-</section>
-
-<section class="section">
-  <h2>Get in Touch</h2>
-  <p>
-    Whether you're curious about a custom order, need help choosing the
-    perfect design, or just want to say hello—we’d love to hear from you!
-  </p>
-  <p>
-    Email us at: <a href="mailto:hello@yourstorename.com">hello@notarealstorename.com</a><br>
-    Follow us on Instagram: <a href="https://instagram.com/yourhandle">@notrealhandle</a>
-  </p>
-</section>
-
-<footer style="text-align:center; margin-top:60px; font-size:0.9em; color:#666;">
-  <p>&copy; <span id="year"></span> Kawaii Baby. All rights reserved.</p>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <header><h1>About Kawaii Baby</h1></header>
+  <section class="section">
+    <h2>Handcrafted with love: plushies & bags made just for you 🧶</h2>
+    <p><strong>Our Story</strong><br>
+    Welcome to Kawaii Baby—a small, family‑run shop founded in 2015…</p>
+    <!-- continue content -->
+  </section>
+  <footer>
+    <p>Email us at: <a href="mailto:hello@notarealstorename.com">hello@notarealstorename.com</a></p>
+    <p>Follow us on Instagram: <a href="https://instagram.com/notrealhandle">@notrealhandle</a></p>
+    <p>© Kawaii Baby. All rights reserved.</p>
+  </footer>
 </body>
 </html>
 
